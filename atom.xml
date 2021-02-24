@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-02-24T07:26:53.380Z</updated>
+    <title>Never家</title>
+    <updated>2021-02-24T07:34:19.427Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>Flutter开发
+一个菜鸟的各种日常</subtitle>
     <logo>https://neverovo.github.io/images/avatar.png</logo>
     <icon>https://neverovo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, Never家</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://neverovo.github.io/post/hello-gridea/</id>
-        <link href="https://neverovo.github.io/post/hello-gridea/">
+        <id>https://neverovo.github.io/hello-gridea/</id>
+        <link href="https://neverovo.github.io/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
