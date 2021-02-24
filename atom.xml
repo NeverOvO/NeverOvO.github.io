@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
     <title>Never家</title>
-    <updated>2021-02-24T09:16:50.712Z</updated>
+    <updated>2021-02-24T09:17:43.369Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
@@ -16,7 +16,7 @@
         <id>https://neverovo.github.io/ji-yu-github-de-bo-ke-da-jian/</id>
         <link href="https://neverovo.github.io/ji-yu-github-de-bo-ke-da-jian/">
         </link>
-        <updated>2021-02-24T09:04:30.000Z</updated>
+        <updated>2021-02-24T09:17:37.000Z</updated>
         <summary type="html"><![CDATA[<p>学习搭建博客的学习资料，仅个人学习用</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>学习搭建博客的学习资料，仅个人学习用</p>
@@ -36,6 +36,46 @@
 <p>在设置菜单中，按照Developer settings--Personal access tokens的路径进入，点击右上方的Generate new token。</p>
 <p>在New token设置页面，Note输入对Token的描述或备注，勾选下方的repo。</p>
 <p>最后将页面拉至底部，点击Generate token，就会生成一串由数字和字母组成的字符，这就是刚刚生成的Token。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我的一点小事]]></title>
+        <id>https://neverovo.github.io/about/</id>
+        <link href="https://neverovo.github.io/about/">
+        </link>
+        <updated>2021-02-24T09:16:33.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝<br>
+<img src="https://neverovo.github.io/post-images/1614155383437.gif" alt="" loading="lazy"></p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<p>本人的自建博客小站，会日常分享一些感想、想法、内容等等……</p>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<ul>
+<li>一个有2年开发时长的程序员；</li>
+<li>会iOS/OC、Flutter/Dart；</li>
+<li>目前维护这3个移动端APP；</li>
+<li>在宁波一个数字货币量化策略交易所上班；</li>
+<li>宁波本地人，男，96年，求妹子！</li>
+</ul>
+<h2 id="目前状态">🌠 目前状态</h2>
+<ul>
+<li>工作较为清闲，借此学习新的开发技术；</li>
+<li>目前正在学习Flutter在桌面端的实现方案；</li>
+<li>可以接Flutter的外包</li>
+</ul>
+<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<ul>
+<li>电影</li>
+<li>音乐</li>
+<li>番剧</li>
+</ul>
+<h2 id="联系我呀">📬 联系我呀</h2>
+<ol>
+<li>Email：1019832705@qq.com</li>
+<li>微信&amp;QQ：18267400651</li>
+<li>Telegram:https://t.me/NeverOuO</li>
+</ol>
 ]]></content>
     </entry>
 </feed>
