@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
     <title>Never家</title>
-    <updated>2021-02-25T01:20:22.723Z</updated>
+    <updated>2021-02-25T01:21:44.168Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
-    <subtitle>LSP的各种日常</subtitle>
+    <subtitle>日常小事记录,联系我请看关于</subtitle>
     <logo>https://neverovo.github.io/images/avatar.png</logo>
     <icon>https://neverovo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Never家</rights>
