@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
     <title>Never家</title>
-    <updated>2021-02-25T03:42:35.352Z</updated>
+    <updated>2021-02-25T04:47:26.212Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, Never家</rights>
     <entry>
         <title type="html"><![CDATA[基于Github的博客搭建 ]]></title>
-        <id>https://neverovo.github.io/ji-yu-github-de-bo-ke-da-jian/</id>
-        <link href="https://neverovo.github.io/ji-yu-github-de-bo-ke-da-jian/">
+        <id>https://neverovo.github.io/post/ji-yu-github-de-bo-ke-da-jian/</id>
+        <link href="https://neverovo.github.io/post/ji-yu-github-de-bo-ke-da-jian/">
         </link>
         <updated>2021-02-24T09:17:37.000Z</updated>
         <summary type="html"><![CDATA[<p>学习搭建博客的学习资料，仅个人学习用</p>
@@ -48,8 +48,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[关于我的一点小事]]></title>
-        <id>https://neverovo.github.io/about/</id>
-        <link href="https://neverovo.github.io/about/">
+        <id>https://neverovo.github.io/post/about/</id>
+        <link href="https://neverovo.github.io/post/about/">
         </link>
         <updated>2021-02-24T09:16:33.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
