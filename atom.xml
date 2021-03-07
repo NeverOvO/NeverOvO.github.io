@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
     <title>Never家</title>
-    <updated>2021-03-06T14:24:53.435Z</updated>
+    <updated>2021-03-07T04:49:40.975Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
@@ -164,9 +164,9 @@
 <h1 id="3月统计统计">3月统计统计</h1>
 <h2 id="301-305月末统计整体与百分比">3.01-3.05（月末统计整体与百分比）</h2>
 <ul>
-<li>0点上涨  2天  下跌 3天</li>
-<li>8点上涨  3天   下跌 2天</li>
-<li>16点上涨 3天   下跌 2天</li>
+<li>0点上涨  2天  下跌 4天</li>
+<li>8点上涨  4天   下跌 2天</li>
+<li>16点上涨 3天   下跌 3天</li>
 </ul>
 <table>
 <thead>
@@ -207,6 +207,12 @@
 <td style="text-align:center"><strong>-1.84</strong></td>
 <td style="text-align:center"><strong>-4.01</strong></td>
 <td style="text-align:center"><strong>-2.29</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">3.06⬇️</td>
+<td style="text-align:center"><strong>-1.07</strong></td>
+<td style="text-align:center">0.06</td>
+<td style="text-align:center"><strong>-0.30</strong></td>
 </tr>
 </tbody>
 </table>
