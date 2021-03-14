@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Flutter 2.0 个人实践 | Never家</title>
+<title>Flutter轮子记录（一） | Never家</title>
 <meta name="baidu-site-verification" content="code-gs41wGgNAx" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -31,11 +31,10 @@
 
 
     <meta name="description" content="
-1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。
-2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。
-3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
-4. 内容皆为..." />
-    <meta name="keywords" content="技术学习,NeverOuO" />
+1. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
+2. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。
+3. 全平台科学上网：https://aff.ckh01.com/a..." />
+    <meta name="keywords" content="Flutter,NeverOuO" />
   </head>
   <body>
     <div id="app" class="main">
@@ -118,20 +117,17 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Flutter 2.0 个人实践</h2>
-            <div class="post-date">2021-03-07 18:25</div>
+            <h2 class="post-title">Flutter轮子记录（一）</h2>
+            <div class="post-date">2021-03-14 18:11</div>
             
               <div class="feature-container" style="background-image: url('https://flutter.cn/images/flutter-logo-sharing.png')">
               </div>
             
             <div class="post-content" v-pre>
               <font size=1>
-1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。<br>
-2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。<br>
-3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
-4. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
-5. 封面图来源：https://pixabay.com <br>
-6. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
+1. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
+2. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
+3. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
 </font>
 <!-- more -->
 <font size=2>
@@ -139,58 +135,94 @@
 <br>内容概要：
 </font>
 <p><ul class="markdownIt-TOC">
-<li><a href="#flutter%E5%8F%AF%E4%BB%A5%E5%85%B1%E5%90%8C%E8%AE%A8%E8%AE%BA">Flutter可以共同讨论</a></li>
-<li><a href="#flutter-%E6%9B%B4%E6%96%B0">Flutter 更新</a></li>
-<li><a href="#flutter-%E5%90%AF%E7%94%A8%E6%A1%8C%E9%9D%A2%E7%AB%AF">Flutter 启用桌面端</a></li>
-<li><a href="#flutter-%E8%80%81%E9%A1%B9%E7%9B%AE%E5%A2%9E%E5%8A%A0%E6%A1%8C%E9%9D%A2%E6%94%AF%E6%8C%81">Flutter 老项目增加桌面支持</a></li>
-<li><a href="#flutter-%E8%80%81%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E7%A9%BA%E5%AE%89%E5%85%A8%E6%94%AF%E6%8C%81%E7%9A%84%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5">Flutter 老项目对于第三方包空安全支持的快速查询语句</a></li>
-<li><a href="#flutter%E6%A1%8C%E9%9D%A2%E7%AB%AF%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99">Flutter桌面端编译报错</a></li>
-<li><a href="#flutter%E7%9A%84%E9%83%A8%E5%88%86%E5%8F%AF%E8%A1%8C%E7%A9%BA%E5%AE%89%E5%85%A8%E8%BF%81%E7%A7%BB">Flutter的部分可行空安全迁移</a>
+<li><a href="#like_button">like_button</a>
 <ul>
-<li><a href="#flutter%E4%B8%AD%E6%96%87%E7%AB%99%E5%86%99%E7%9A%84">Flutter中文站写的</a></li>
-<li><a href="#%E5%8F%AF%E4%BB%A5%E5%B0%86string-int%E8%BF%99%E4%BA%9B%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%88%90var%E6%9D%A5%E8%A7%A3%E5%86%B3%E9%83%A8%E5%88%86%E7%A9%BA%E5%AE%89%E5%85%A8%E9%94%99%E8%AF%AF">可以将String、int这些类型转成var，来解决部分空安全错误。</a></li>
-<li><a href="#key-key-%E9%83%A8%E5%88%86%E6%94%B9%E4%B8%BA-keykey">Key key 部分：改为 Key？key</a></li>
+<li><a href="#%E6%A0%B7%E5%BC%8F">样式</a></li>
+<li><a href="#%E7%94%A8%E6%B3%95">用法</a></li>
+<li><a href="#%E4%B8%AD%E6%96%87%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E">中文补充说明</a></li>
+</ul>
+</li>
+<li><a href="#flutter_neumorphic">flutter_neumorphic</a>
+<ul>
+<li><a href="#%E6%A0%B7%E5%BC%8F-2">样式</a></li>
+<li><a href="#%E7%94%A8%E6%B3%95-2">用法</a></li>
+<li><a href="#%E4%B8%AA%E4%BA%BA%E5%AE%9E%E7%8E%B0">个人实现</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E4%BC%BC%E5%9C%A8%E7%BA%BFdemo">其他类似在线Demo</a></li>
 </ul>
 </li>
 </ul>
 </p>
 </font>
 <hr>
-<h1 id="flutter可以共同讨论">Flutter可以共同讨论</h1>
-<p>联系方式看左侧-关于</p>
-<h1 id="flutter-更新">Flutter 更新</h1>
-<p>命令行： flutter upgrade （2021年3月7日 可以直接更新到2.0.1）</p>
-<h1 id="flutter-启用桌面端">Flutter 启用桌面端</h1>
-<p>更新完成后启用三个桌面端：<br>
-flutter config --enable-windows-desktop<br>
-flutter config --enable-macos-desktop<br>
-flutter config --enable-linux-desktop</p>
-<p>然后执行：flutter devices 确认现在支持列表，在Mac下如图即支持了macOS端。<br>
-<img src="https://neverovo.github.io/post-images/1615113078688.png" alt="" loading="lazy"></p>
-<h1 id="flutter-老项目增加桌面支持">Flutter 老项目增加桌面支持</h1>
-<p>//未成功实施：网上的例子是下列语句，可以在原本不支持桌面端的项目中增加桌面端支持。<br>
-flutter create --platforms=windows,macos,linux .</p>
-<h1 id="flutter-老项目对于第三方包空安全支持的快速查询语句">Flutter 老项目对于第三方包空安全支持的快速查询语句</h1>
-<p>命令行cd到项目root目录下，执行：<br>
-dart pub outdated --mode=null-safety</p>
-<p>效果如图：</p>
-<figure data-type="image" tabindex="1"><img src="https://neverovo.github.io/post-images/1615113310495.png" alt="" loading="lazy"></figure>
-<h1 id="flutter桌面端编译报错">Flutter桌面端编译报错</h1>
-<p>通道切换到beta版本才行。</p>
-<h1 id="flutter的部分可行空安全迁移">Flutter的部分可行空安全迁移</h1>
-<h2 id="flutter中文站写的">Flutter中文站写的</h2>
-<p>1、dart migrate --apply-changes</p>
-<h2 id="可以将string-int这些类型转成var来解决部分空安全错误">可以将String、int这些类型转成var，来解决部分空安全错误。</h2>
-<p>1、dart fix --dry-run<br>
-2、dart fix --apply</p>
-<h2 id="key-key-部分改为-keykey">Key key 部分：改为 Key？key</h2>
+<h1 id="like_button"><a href="https://pub.flutter-io.cn/packages/like_button">like_button</a></h1>
+<h2 id="样式">样式</h2>
+<img src="https://github.com/fluttercandies/Flutter_Candies/raw/master/gif/like_button/like_button.gif" width = "300"  alt="样式" align=center />
+<h2 id="用法">用法</h2>
+<p>the default effects is Icons.favorite</p>
+<pre><code>LikeButton(),
+</code></pre>
+<p>and you can also define custom effects.</p>
+<pre><code>  LikeButton(
+          size: buttonSize,
+          circleColor:
+              CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+          bubblesColor: BubblesColor(
+            dotPrimaryColor: Color(0xff33b5e5),
+            dotSecondaryColor: Color(0xff0099cc),
+          ),
+          likeBuilder: (bool isLiked) {
+            return Icon(
+              Icons.home,
+              color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
+              size: buttonSize,
+            );
+          },
+          likeCount: 665,
+          countBuilder: (int count, bool isLiked, String text) {
+            var color = isLiked ? Colors.deepPurpleAccent : Colors.grey;
+            Widget result;
+            if (count == 0) {
+              result = Text(
+                &quot;love&quot;,
+                style: TextStyle(color: color),
+              );
+            } else
+              result = Text(
+                text,
+                style: TextStyle(color: color),
+              );
+            return result;
+          },
+        ),
+</code></pre>
+<h2 id="中文补充说明">中文补充说明</h2>
+<p>直达：<a href="https://kknews.cc/tech/e6pjqgz.html">直达</a></p>
+<h1 id="flutter_neumorphic"><a href="https://pub.flutter-io.cn/packages/flutter_neumorphic">flutter_neumorphic</a></h1>
+<h2 id="样式-2">样式</h2>
+<img src="https://github.com/Idean/Flutter-Neumorphic/raw/master/medias/playground.gif" width = "300"  alt="样式" align=center />
+<h2 id="用法-2">用法</h2>
+<pre><code>Neumorphic(
+  style: NeumorphicStyle(
+    shape: NeumorphicShape.concave,
+    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)), 
+    depth: 8,
+    lightSource: LightSource.topLeft,
+    color: Colors.grey
+  ),
+  child: ...
+)
+</code></pre>
+<h2 id="个人实现">个人实现</h2>
+<img src="https://cdn.jellow.site/FrdjNbXuJRQWFqvjrozQQU7dnoyq.jpg?imageMogr2/auto-orient%7Cwatermark/3/image/aHR0cHM6Ly93YXRlcm1hcmsuamVsbG93LmNsdWIvP3RleHQ9JUU1JThEJUIzJUU1JTg4JUJCJTIwJTQwTmV2ZXJPdU8maGVpZ2h0PTc1/gravity/SouthEast/dx/10/dy/10" width = "300"  alt="样式" align=center />
+<h2 id="其他类似在线demo">其他类似在线Demo</h2>
+<p>直达： <a href="https://neumorphism.io/#e0e0e0">Demo</a></p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://neverovo.github.io/tag/lIDlMPAfY/" class="tag">
-                    技术学习
+                  <a href="https://neverovo.github.io/tag/tJJc1ZXtL/" class="tag">
+                    Flutter
                   </a>
                 
                   <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
@@ -202,9 +234,9 @@ dart pub outdated --mode=null-safety</p>
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://neverovo.github.io/post/trxusdt-yong-xu-he-yue-3-ge-jiao-ge-jie-dian-qian-hou-zou-shi-fen-xi/">
+                <a href="https://neverovo.github.io/post/never-or-jin-ri-fa-jia-zhi-fu-ri-chang-shou-ji-20210312/">
                   <h3 class="post-title">
-                    &lt;暂时中断&gt;TRX/USDT永续合约3个交割节点走势统计
+                    Never | 今日发家致富日常手记-2021/03/12
                   </h3>
                 </a>
               </div>
