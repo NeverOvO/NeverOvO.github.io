@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://neverovo.github.io</id>
     <title>Never家</title>
-    <updated>2021-03-15T07:20:15.177Z</updated>
+    <updated>2021-03-16T02:29:16.764Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://neverovo.github.io"/>
     <link rel="self" href="https://neverovo.github.io/atom.xml"/>
@@ -2728,6 +2728,7 @@
 <li><a href="#key-key-%E9%83%A8%E5%88%86%E6%94%B9%E4%B8%BA-keykey">Key key 部分：改为 Key？key</a></li>
 </ul>
 </li>
+<li><a href="#flutter-%E5%9B%9E%E9%80%80%E8%87%B3%E6%9C%80%E5%90%8E%E4%B8%80%E7%89%88%E4%B8%8D%E6%94%AF%E6%8C%81%E7%A9%BA%E5%AE%89%E5%85%A8%E7%9A%84%E7%89%88%E6%9C%AC">Flutter 回退至最后一版不支持空安全的版本</a></li>
 </ul>
 </p>
 </font>
@@ -2760,6 +2761,11 @@ dart pub outdated --mode=null-safety</p>
 <p>1、dart fix --dry-run<br>
 2、dart fix --apply</p>
 <h2 id="key-key-部分改为-keykey">Key key 部分：改为 Key？key</h2>
+<h1 id="flutter-回退至最后一版不支持空安全的版本">Flutter 回退至最后一版不支持空安全的版本</h1>
+<p>1.22.6</p>
+<p>1：到flutter sdk所在的目录下(自己找flutter的安装目录到flutter文件夹里面那一层即可)</p>
+<p>2：git reset --hard 9b2d32b605630f28625709ebd9d78ab3016b2bf6</p>
+<p>3: flutter doctor等待更新完成</p>
 ]]></content>
     </entry>
 </feed>
