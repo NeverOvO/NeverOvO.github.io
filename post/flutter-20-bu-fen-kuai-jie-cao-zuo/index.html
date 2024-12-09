@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Flutter 2.0 个人实践 | Never家</title>
+<meta name="baidu-site-verification" content="code-gs41wGgNAx" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://neverovo.github.io/favicon.ico?v=1733728414232">
+<link rel="stylesheet" href="https://neverovo.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRVN6HM6LN"></script>
+<script data-ad-client="ca-pub-7573589261175525" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRVN6HM6LN');
+</script>
+
+
+    <meta name="description" content="
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
+4. 内容皆为..." />
+    <meta name="keywords" content="技术学习,NeverOuO" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://neverovo.github.io">
+        <img src="https://neverovo.github.io/images/avatar.png?v=1733728414232" class="site-logo">
+        <h1 class="site-title">Never家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            🌠  首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            📝  文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            🏷  分类
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            🙋🏻  关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NeverOvO" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/NeverQAQ" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/lai-hai-bo-70" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      日常小事记录,联系我请看关于
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://neverovo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Flutter 2.0 个人实践</h2>
+            <div class="post-date">2021-03-07 18:25</div>
+            
+              <div class="feature-container" style="background-image: url('https://flutter.cn/images/flutter-logo-sharing.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <font size=1>
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。<br>
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。<br>
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
+4. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
+5. 封面图来源：https://pixabay.com <br>
+6. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
+</font>
+<!-- more -->
+<font size=2>
+<font size=1>
+<br>内容概要：
+</font>
+<p><ul class="markdownIt-TOC">
+<li><a href="#flutter%E5%8F%AF%E4%BB%A5%E5%85%B1%E5%90%8C%E8%AE%A8%E8%AE%BA">Flutter可以共同讨论</a></li>
+<li><a href="#flutter-%E6%9B%B4%E6%96%B0">Flutter 更新</a></li>
+<li><a href="#flutter-%E5%90%AF%E7%94%A8%E6%A1%8C%E9%9D%A2%E7%AB%AF">Flutter 启用桌面端</a></li>
+<li><a href="#flutter-%E8%80%81%E9%A1%B9%E7%9B%AE%E5%A2%9E%E5%8A%A0%E6%A1%8C%E9%9D%A2%E6%94%AF%E6%8C%81">Flutter 老项目增加桌面支持</a></li>
+<li><a href="#flutter-%E8%80%81%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E7%A9%BA%E5%AE%89%E5%85%A8%E6%94%AF%E6%8C%81%E7%9A%84%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5">Flutter 老项目对于第三方包空安全支持的快速查询语句</a></li>
+<li><a href="#flutter%E6%A1%8C%E9%9D%A2%E7%AB%AF%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99">Flutter桌面端编译报错</a></li>
+<li><a href="#flutter%E7%9A%84%E9%83%A8%E5%88%86%E5%8F%AF%E8%A1%8C%E7%A9%BA%E5%AE%89%E5%85%A8%E8%BF%81%E7%A7%BB">Flutter的部分可行空安全迁移</a>
+<ul>
+<li><a href="#flutter%E4%B8%AD%E6%96%87%E7%AB%99%E5%86%99%E7%9A%84">Flutter中文站写的</a></li>
+<li><a href="#%E5%8F%AF%E4%BB%A5%E5%B0%86string-int%E8%BF%99%E4%BA%9B%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%88%90var%E6%9D%A5%E8%A7%A3%E5%86%B3%E9%83%A8%E5%88%86%E7%A9%BA%E5%AE%89%E5%85%A8%E9%94%99%E8%AF%AF">可以将String、int这些类型转成var，来解决部分空安全错误。</a></li>
+<li><a href="#key-key-%E9%83%A8%E5%88%86%E6%94%B9%E4%B8%BA-keykey">Key key 部分：改为 Key？key</a></li>
+</ul>
+</li>
+<li><a href="#flutter-%E5%9B%9E%E9%80%80%E8%87%B3%E6%9C%80%E5%90%8E%E4%B8%80%E7%89%88%E4%B8%8D%E6%94%AF%E6%8C%81%E7%A9%BA%E5%AE%89%E5%85%A8%E7%9A%84%E7%89%88%E6%9C%AC">Flutter 回退至最后一版不支持空安全的版本</a></li>
+</ul>
+</p>
+</font>
+<hr>
+<h1 id="flutter可以共同讨论">Flutter可以共同讨论</h1>
+<p>联系方式看左侧-关于</p>
+<h1 id="flutter-更新">Flutter 更新</h1>
+<p>命令行： flutter upgrade （2021年3月7日 可以直接更新到2.0.1）</p>
+<h1 id="flutter-启用桌面端">Flutter 启用桌面端</h1>
+<p>更新完成后启用三个桌面端：<br>
+flutter config --enable-windows-desktop<br>
+flutter config --enable-macos-desktop<br>
+flutter config --enable-linux-desktop</p>
+<p>然后执行：flutter devices 确认现在支持列表，在Mac下如图即支持了macOS端。<br>
+<img src="https://neverovo.github.io/post-images/1615113078688.png" alt="" loading="lazy"></p>
+<h1 id="flutter-老项目增加桌面支持">Flutter 老项目增加桌面支持</h1>
+<p>//未成功实施：网上的例子是下列语句，可以在原本不支持桌面端的项目中增加桌面端支持。<br>
+flutter create --platforms=windows,macos,linux .</p>
+<h1 id="flutter-老项目对于第三方包空安全支持的快速查询语句">Flutter 老项目对于第三方包空安全支持的快速查询语句</h1>
+<p>命令行cd到项目root目录下，执行：<br>
+dart pub outdated --mode=null-safety</p>
+<p>效果如图：</p>
+<figure data-type="image" tabindex="1"><img src="https://neverovo.github.io/post-images/1615113310495.png" alt="" loading="lazy"></figure>
+<h1 id="flutter桌面端编译报错">Flutter桌面端编译报错</h1>
+<p>通道切换到beta版本才行。</p>
+<h1 id="flutter的部分可行空安全迁移">Flutter的部分可行空安全迁移</h1>
+<h2 id="flutter中文站写的">Flutter中文站写的</h2>
+<p>1、dart migrate --apply-changes</p>
+<h2 id="可以将string-int这些类型转成var来解决部分空安全错误">可以将String、int这些类型转成var，来解决部分空安全错误。</h2>
+<p>1、dart fix --dry-run<br>
+2、dart fix --apply</p>
+<h2 id="key-key-部分改为-keykey">Key key 部分：改为 Key？key</h2>
+<h1 id="flutter-回退至最后一版不支持空安全的版本">Flutter 回退至最后一版不支持空安全的版本</h1>
+<p>1.22.6</p>
+<p>1：到flutter sdk所在的目录下(自己找flutter的安装目录到flutter文件夹里面那一层即可)</p>
+<p>2：git reset --hard 9b2d32b605630f28625709ebd9d78ab3016b2bf6</p>
+<p>3: flutter doctor等待更新完成</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://neverovo.github.io/tag/lIDlMPAfY/" class="tag">
+                    技术学习
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
+                    NeverOuO
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://neverovo.github.io/post/trxusdt-yong-xu-he-yue-3-ge-jiao-ge-jie-dian-qian-hou-zou-shi-fen-xi/">
+                  <h3 class="post-title">
+                    &lt;暂时中断&gt;TRX/USDT永续合约3个交割节点走势统计
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
