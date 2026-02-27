@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Flutter轮子记录（一） | Never家</title>
+<meta name="baidu-site-verification" content="code-gs41wGgNAx" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://neverovo.github.io/favicon.ico?v=1772177087139">
+<link rel="stylesheet" href="https://neverovo.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRVN6HM6LN"></script>
+<script data-ad-client="ca-pub-7573589261175525" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRVN6HM6LN');
+</script>
+
+
+    <meta name="description" content="
+1. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
+2. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。
+3. 全平台科学上网：https://aff.ckh01.com/a..." />
+    <meta name="keywords" content="Flutter,NeverOuO" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://neverovo.github.io">
+        <img src="https://neverovo.github.io/images/avatar.png?v=1772177087139" class="site-logo">
+        <h1 class="site-title">Never家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            🌠  首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            📝  文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            🏷  分类
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            🙋🏻  关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NeverOvO" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/NeverQAQ" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/lai-hai-bo-70" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      日常小事记录,联系我请看关于
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://neverovo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Flutter轮子记录（一）</h2>
+            <div class="post-date">2021-03-14 18:11</div>
+            
+              <div class="feature-container" style="background-image: url('https://flutter.cn/images/flutter-logo-sharing.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <font size=1>
+1. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
+2. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
+3. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
+</font>
+<!-- more -->
+<font size=2>
+<font size=1>
+<br>内容概要：
+</font>
+<p><ul class="markdownIt-TOC">
+<li><a href="#like_button">like_button</a>
+<ul>
+<li><a href="#%E6%A0%B7%E5%BC%8F">样式</a></li>
+<li><a href="#%E7%94%A8%E6%B3%95">用法</a></li>
+<li><a href="#%E4%B8%AD%E6%96%87%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E">中文补充说明</a></li>
+</ul>
+</li>
+<li><a href="#flutter_neumorphic">flutter_neumorphic</a>
+<ul>
+<li><a href="#%E6%A0%B7%E5%BC%8F-2">样式</a></li>
+<li><a href="#%E7%94%A8%E6%B3%95-2">用法</a></li>
+<li><a href="#%E4%B8%AA%E4%BA%BA%E5%AE%9E%E7%8E%B0">个人实现</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E4%BC%BC%E5%9C%A8%E7%BA%BFdemo">其他类似在线Demo</a></li>
+</ul>
+</li>
+</ul>
+</p>
+</font>
+<hr>
+<h1 id="like_button"><a href="https://pub.flutter-io.cn/packages/like_button">like_button</a></h1>
+<h2 id="样式">样式</h2>
+<img src="https://github.com/fluttercandies/Flutter_Candies/raw/master/gif/like_button/like_button.gif" width = "300"  alt="样式" align=center />
+<h2 id="用法">用法</h2>
+<p>the default effects is Icons.favorite</p>
+<pre><code>LikeButton(),
+</code></pre>
+<p>and you can also define custom effects.</p>
+<pre><code>  LikeButton(
+          size: buttonSize,
+          circleColor:
+              CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+          bubblesColor: BubblesColor(
+            dotPrimaryColor: Color(0xff33b5e5),
+            dotSecondaryColor: Color(0xff0099cc),
+          ),
+          likeBuilder: (bool isLiked) {
+            return Icon(
+              Icons.home,
+              color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
+              size: buttonSize,
+            );
+          },
+          likeCount: 665,
+          countBuilder: (int count, bool isLiked, String text) {
+            var color = isLiked ? Colors.deepPurpleAccent : Colors.grey;
+            Widget result;
+            if (count == 0) {
+              result = Text(
+                &quot;love&quot;,
+                style: TextStyle(color: color),
+              );
+            } else
+              result = Text(
+                text,
+                style: TextStyle(color: color),
+              );
+            return result;
+          },
+        ),
+</code></pre>
+<h2 id="中文补充说明">中文补充说明</h2>
+<p>直达：<a href="https://kknews.cc/tech/e6pjqgz.html">直达</a></p>
+<h1 id="flutter_neumorphic"><a href="https://pub.flutter-io.cn/packages/flutter_neumorphic">flutter_neumorphic</a></h1>
+<h2 id="样式-2">样式</h2>
+<img src="https://github.com/Idean/Flutter-Neumorphic/raw/master/medias/playground.gif" width = "300"  alt="样式" align=center />
+<h2 id="用法-2">用法</h2>
+<pre><code>Neumorphic(
+  style: NeumorphicStyle(
+    shape: NeumorphicShape.concave,
+    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)), 
+    depth: 8,
+    lightSource: LightSource.topLeft,
+    color: Colors.grey
+  ),
+  child: ...
+)
+</code></pre>
+<h2 id="个人实现">个人实现</h2>
+<img src="https://cdn.jellow.site/FrdjNbXuJRQWFqvjrozQQU7dnoyq.jpg?imageMogr2/auto-orient%7Cwatermark/3/image/aHR0cHM6Ly93YXRlcm1hcmsuamVsbG93LmNsdWIvP3RleHQ9JUU1JThEJUIzJUU1JTg4JUJCJTIwJTQwTmV2ZXJPdU8maGVpZ2h0PTc1/gravity/SouthEast/dx/10/dy/10" width = "300"  alt="样式" align=center />
+<h2 id="其他类似在线demo">其他类似在线Demo</h2>
+<p>直达： <a href="https://neumorphism.io/#e0e0e0">Demo</a></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://neverovo.github.io/tag/tJJc1ZXtL/" class="tag">
+                    Flutter
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
+                    NeverOuO
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://neverovo.github.io/post/never-or-jin-ri-fa-jia-zhi-fu-ri-chang-shou-ji-20210312/">
+                  <h3 class="post-title">
+                    Never | 今日发家致富日常手记-2021/03/12
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>

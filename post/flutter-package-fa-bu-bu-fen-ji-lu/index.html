@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Flutter Package 发布部分记录 | Never家</title>
+<meta name="baidu-site-verification" content="code-gs41wGgNAx" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://neverovo.github.io/favicon.ico?v=1772177087139">
+<link rel="stylesheet" href="https://neverovo.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRVN6HM6LN"></script>
+<script data-ad-client="ca-pub-7573589261175525" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRVN6HM6LN');
+</script>
+
+
+    <meta name="description" content="
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
+4. 内容皆为..." />
+    <meta name="keywords" content="Flutter,技术学习,NeverOuO" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://neverovo.github.io">
+        <img src="https://neverovo.github.io/images/avatar.png?v=1772177087139" class="site-logo">
+        <h1 class="site-title">Never家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            🌠  首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            📝  文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            🏷  分类
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            🙋🏻  关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NeverOvO" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/NeverQAQ" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/lai-hai-bo-70" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      日常小事记录,联系我请看关于
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://neverovo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Flutter Package 发布部分记录</h2>
+            <div class="post-date">2021-04-11 20:41</div>
+            
+              <div class="feature-container" style="background-image: url('https://flutter.cn/images/flutter-logo-sharing.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <font size=1>
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。<br>
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。<br>
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
+4. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
+5. 封面图来源：https://pixabay.com <br>
+6. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
+</font>
+<!-- more -->
+<font size=2>
+<font size=1>
+<br>内容概要：
+</font>
+<p><ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80%E4%B8%BB%E8%A6%81%E9%85%8D%E7%BD%AE">一：主要配置</a>
+<ul>
+<li><a href="#1-pubspecyaml">1. pubspec.yaml</a></li>
+<li><a href="#2changelogmd">2.CHANGELOG.md</a></li>
+<li><a href="#3-license">3. LICENSE</a>
+<ul>
+<li><a href="#1%E5%85%88%E5%9C%A8github%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%BB%93%E5%BA%93">1:先在Github上创建你的项目的仓库</a></li>
+<li><a href="#2%E5%88%9B%E5%BB%BA%E6%97%B6%E9%80%89%E6%8B%A9license-bsd-3-clause-new-or-revised-license">2:创建时选择LICENSE-BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License</a></li>
+<li><a href="#3%E5%A4%8D%E5%88%B6%E5%85%B6%E4%B8%AD%E5%86%85%E5%AE%B9%E5%88%B0%E6%9C%AC%E5%9C%B0">3:复制其中内容到本地</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8A%E4%BC%A0">上传</a>
+<ul>
+<li><a href="#1%E6%89%A7%E8%A1%8C">1:执行</a></li>
+<li><a href="#2%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%8A%E4%BC%A0%E4%BC%9A%E8%A6%81%E6%B1%82%E7%99%BB%E5%BD%95%E8%B0%B7%E6%AD%8C%E8%B4%A6%E5%8F%B7-%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E4%BC%9A%E6%9C%89%E4%B8%80%E4%B8%AAurl%E7%82%B9%E5%87%BB%E8%AE%A4%E8%AF%81%E5%8D%B3%E5%8F%AF">2:第一次上传，会要求登录谷歌账号。在命令行中会有一个URL，点击认证即可</a></li>
+<li><a href="#3%E5%A6%82%E6%9E%9C%E5%87%BA%E7%8E%B0%E4%BB%A5%E4%B8%8B%E6%8F%90%E7%A4%BA%E8%BE%93%E5%85%A5y">3:如果出现以下提示，输入Y</a></li>
+<li><a href="#4successfully-uploaded-package-%E5%8D%B3%E6%88%90%E5%8A%9F%E7%AD%89%E5%BE%85%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E5%90%8E%E5%8F%AF%E4%BB%A5%E5%9C%A8%E6%89%98%E7%AE%A1%E4%B8%AD%E7%9C%8B%E5%88%B0">4:Successfully uploaded package. 即成功，等待一段时间后可以在托管中看到</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAexample%E9%A1%B9%E7%9B%AE">创建Example项目</a>
+<ul>
+<li><a href="#1%E5%9C%A8lib%E5%90%8C%E7%BA%A7%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%91%BD%E5%90%8D%E4%B8%BA-example">1.在lib同级目录下，新建文件夹，命名为 Example</a></li>
+<li><a href="#2-cd-example">2. cd ./Example</a></li>
+<li><a href="#3-flutter-create">3. flutter create .</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</font>
+<hr>
+<h1 id="一主要配置">一：主要配置</h1>
+<h2 id="1-pubspecyaml">1. pubspec.yaml</h2>
+<pre><code>name: 包名
+description: 自用插件包
+version: 0.0.1
+authors: 你的名字
+homepage: https://github.com/NeverOvO
+
+</code></pre>
+<h2 id="2changelogmd">2.CHANGELOG.md</h2>
+<pre><code>## 0.0.1
+
+版本更新内容
+
+* TODO: Describe initial release.
+
+</code></pre>
+<h2 id="3-license">3. LICENSE</h2>
+<p>这个比较麻烦</p>
+<h3 id="1先在github上创建你的项目的仓库">1:先在Github上创建你的项目的仓库</h3>
+<h3 id="2创建时选择license-bsd-3-clause-new-or-revised-license">2:创建时选择LICENSE-BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License</h3>
+<h3 id="3复制其中内容到本地">3:复制其中内容到本地</h3>
+<pre><code>BSD 3-Clause License
+
+Copyright (c) 2021, Haibo Lai
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+</code></pre>
+<h1 id="上传">上传</h1>
+<h2 id="1执行">1:执行</h2>
+<pre><code>flutter packages pub publish --server=https://pub.dartlang.org
+</code></pre>
+<h2 id="2第一次上传会要求登录谷歌账号-在命令行中会有一个url点击认证即可">2:第一次上传，会要求登录谷歌账号。在命令行中会有一个URL，点击认证即可</h2>
+<h2 id="3如果出现以下提示输入y">3:如果出现以下提示，输入Y</h2>
+<pre><code>Package has 1 warning.. Do you want to publish neveruseless 0.0.1 (y/N)? y
+</code></pre>
+<h2 id="4successfully-uploaded-package-即成功等待一段时间后可以在托管中看到">4:Successfully uploaded package. 即成功，等待一段时间后可以在托管中看到</h2>
+<p>#补充</p>
+<h2 id="创建example项目">创建Example项目</h2>
+<h3 id="1在lib同级目录下新建文件夹命名为-example">1.在lib同级目录下，新建文件夹，命名为 Example</h3>
+<h3 id="2-cd-example">2. cd ./Example</h3>
+<h3 id="3-flutter-create">3. flutter create .</h3>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://neverovo.github.io/tag/tJJc1ZXtL/" class="tag">
+                    Flutter
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/lIDlMPAfY/" class="tag">
+                    技术学习
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
+                    NeverOuO
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://neverovo.github.io/post/never-or-zhou-mo-xiao-ji-20210410and11/">
+                  <h3 class="post-title">
+                    Never | 周末小记- 2021/04/10&amp;11
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>

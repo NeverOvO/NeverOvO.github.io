@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>windows_soundplay windows声音播放代码 | Never家</title>
+<meta name="baidu-site-verification" content="code-gs41wGgNAx" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://neverovo.github.io/favicon.ico?v=1772177087139">
+<link rel="stylesheet" href="https://neverovo.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRVN6HM6LN"></script>
+<script data-ad-client="ca-pub-7573589261175525" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRVN6HM6LN');
+</script>
+
+
+    <meta name="description" content="Github地址 ： https://github.com/NeverOvO/windows_soundplay
+windows_soundplay
+基于WIN32实现的WIndows本地声音播放组建
+ win32: ^2.0.5
+
+代码的..." />
+    <meta name="keywords" content="Flutter,技术学习,NeverOuO" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://neverovo.github.io">
+        <img src="https://neverovo.github.io/images/avatar.png?v=1772177087139" class="site-logo">
+        <h1 class="site-title">Never家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            🌠  首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            📝  文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            🏷  分类
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            🙋🏻  关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NeverOvO" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/NeverQAQ" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/lai-hai-bo-70" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      日常小事记录,联系我请看关于
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://neverovo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">windows_soundplay windows声音播放代码</h2>
+            <div class="post-date">2021-05-10 11:28</div>
+            
+              <div class="feature-container" style="background-image: url('https://flutter.cn/images/flutter-logo-sharing.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>Github地址 ： https://github.com/NeverOvO/windows_soundplay</p>
+<h1 id="windows_soundplay">windows_soundplay</h1>
+<p>基于WIN32实现的WIndows本地声音播放组建</p>
+<pre><code> win32: ^2.0.5
+</code></pre>
+<h1 id="代码的简单解析记录">代码的简单解析记录</h1>
+<p>1: win打包后的基于项目总目录的默认资源路径</p>
+<pre><code>String _thisRoute = r'\data\flutter_assets\assets\';
+</code></pre>
+<p>2:这里是去获取本项目打包后 在系统中的首路径</p>
+<pre><code>Directory dir=new Directory.fromUri(Uri(path: &quot;&quot;));
+String tt = '';
+await dir.absolute.resolveSymbolicLinks().then((value){
+  tt= value;
+});
+</code></pre>
+<p>3:进行播放，采用拼接成为绝对路径的方式避免WIN32 API无法读取文件</p>
+<pre><code>try{
+  final result = PlaySound(TEXT(tt.toString() + _thisRoute + fileName), NULL, SND_FILENAME |  SND_ASYNC);
+  if (result != TRUE) {
+    print('Sound playback failed.');
+    return 'Sound playback failed.';
+  }else{
+    return 'Sound playback success.';
+  }
+}catch(e){
+  return 'Sound playback failed.';
+}
+</code></pre>
+<p>4:  这里2个参数可改 ：SND_FILENAME |  SND_ASYNC</p>
+<p>SND_ASYNC ： 非阻塞式播放音频<br>
+SND_FILENAME ： 视为文件名播放</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://neverovo.github.io/tag/tJJc1ZXtL/" class="tag">
+                    Flutter
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/lIDlMPAfY/" class="tag">
+                    技术学习
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
+                    NeverOuO
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://neverovo.github.io/post/never-or-jin-ri-fa-jia-zhi-fu-ri-chang-shou-ji-20210507/">
+                  <h3 class="post-title">
+                    Never | 今日发家致富日常手记-2021/05/07
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>

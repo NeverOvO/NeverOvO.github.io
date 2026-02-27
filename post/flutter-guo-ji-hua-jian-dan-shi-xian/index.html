@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Flutter 国际化简单实现 | Never家</title>
+<meta name="baidu-site-verification" content="code-gs41wGgNAx" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://neverovo.github.io/favicon.ico?v=1772177087139">
+<link rel="stylesheet" href="https://neverovo.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRVN6HM6LN"></script>
+<script data-ad-client="ca-pub-7573589261175525" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRVN6HM6LN');
+</script>
+
+
+    <meta name="description" content="
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。
+4. 内容皆为..." />
+    <meta name="keywords" content="Flutter,技术学习,NeverOuO" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://neverovo.github.io">
+        <img src="https://neverovo.github.io/images/avatar.png?v=1772177087139" class="site-logo">
+        <h1 class="site-title">Never家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            🌠  首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            📝  文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            🏷  分类
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            🙋🏻  关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/NeverOvO" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/NeverQAQ" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/lai-hai-bo-70" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      日常小事记录,联系我请看关于
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://neverovo.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Flutter 国际化简单实现</h2>
+            <div class="post-date">2021-03-29 11:08</div>
+            
+            <div class="post-content" v-pre>
+              <font size=1>
+1.  内容可能有缺少，为未到时间，个人习惯多次更新记录。<br>
+2. 涉及股票基金的内容，仅作为个人投资复盘记录使用，不构成任何投资建议。<br>
+3. 文章或内容涉及侵权或需要合作请联系本人，请点击左侧菜单栏-关于 有我的联系方式。<br>
+4. 内容皆为我个人喜好，不涉及任何政治倾向、性别倾向，我接受不同意见且不辩解。<br>
+5. 封面图来源：https://pixabay.com <br>
+6. 全平台科学上网：https://aff.ckh01.com/aff.php?aff=8440 <br>
+</font>
+<!-- more -->
+<font size=2>
+<font size=1>
+<br>内容概要：
+</font>
+<p><ul class="markdownIt-TOC">
+<li><a href="#1%E4%BE%9D%E8%B5%96%E7%BB%84%E4%BB%B6">1.依赖组件</a>
+<ul>
+<li><a href="#flutter-intl">Flutter Intl</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE">2.初始化项目</a></li>
+<li><a href="#3%E6%96%B0%E5%A2%9E%E8%AF%AD%E8%A8%80">3.新增语言</a></li>
+<li><a href="#4%E9%85%8D%E7%BD%AE%E8%AF%AD%E8%A8%80">4.配置语言</a></li>
+<li><a href="#5%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%AE%B5">5.添加字段</a></li>
+<li><a href="#6%E4%BD%BF%E7%94%A8">6.使用</a></li>
+</ul>
+</p>
+</font>
+<hr>
+<h1 id="1依赖组件">1.依赖组件</h1>
+<h2 id="flutter-intl">Flutter Intl</h2>
+<p>    在VSCode/Android Studio 的插件商城中查找 Intl就能找到，安装后重启程序。</p>
+<p>    默认情况下，Flutter仅提供美国英语本地化。要添加对其他语言的支持，应用程序必须指定其他MaterialApp属性，并包含一个名为的单独包-“flutter_localizations”。</p>
+<p>    在pubspec.yaml中添加flutter_localizations依赖并执行packages get</p>
+<pre><code>flutter_localizations:
+    sdk: flutter
+</code></pre>
+<h1 id="2初始化项目">2.初始化项目</h1>
+<pre><code>Tools -&gt; Flutter Intl -&gt; Initialize for the Project
+</code></pre>
+<p>就会对项目进行初始化</p>
+<p>初始化结束后，pubspec.yaml中会自动增加以下字段</p>
+<pre><code>flutter_intl:
+    enabled: true
+</code></pre>
+<p>表示国际化已经开启。与此同时，lib目录下会新增generated和l10n两个目录。</p>
+<h1 id="3新增语言">3.新增语言</h1>
+<pre><code>Tools  -&gt; Flutter Intl -&gt; Add Locale
+</code></pre>
+<p>输入地区代码即可生产对应文件</p>
+<p>然后填入相应的local值生成arb文件，如zh表示中文。<br>
+之后便会在lib/generated/intl/目录下会生成新的messages_zh.dart文件</p>
+<h1 id="4配置语言">4.配置语言</h1>
+<p>arb文件生成成功后，剩下的便是在MaterialApp中配置supportedLocales和localizationsDelegates</p>
+<p>在main.dart 的 MaterialApp中添加</p>
+<pre><code>localizationsDelegates: const [
+S.delegate,
+GlobalMaterialLocalizations.delegate,
+GlobalCupertinoLocalizations.delegate,
+GlobalWidgetsLocalizations.delegate
+],
+// 讲zh设置为第一项，缺省为英文
+supportedLocales: S.delegate.supportedLocales,
+</code></pre>
+<ul>
+<li>localizationsDelegates列表中的元素是生成本地化值集合的工厂。</li>
+<li>S.delegate 我们项目的本地化委托类，插件自动生成，他会根据你的arb文件自动生成对应的函数。</li>
+<li>GlobalMaterialLocalizations.delegate 为Material Components库提供了本地化的字符串和其他值。</li>
+<li>GlobalCupertinoLocalizations.delegate 为Cupertino Components库提供了本地化的字符串和其他值。</li>
+<li>GlobalWidgetsLocalizations.delegate定义widget默认的文本方向，从左到右或从右到左。</li>
+<li>supportedLocales支持的本地化。</li>
+<li>S.delegate.supportedLocales我们项目支持的本地化，插件自动生成，它会在你添加arb文件时自动更新你的支持的本地化。</li>
+</ul>
+<h1 id="5添加字段">5.添加字段</h1>
+<p>在I10n 目录下的 intl_zh.arb和intl_en.arb 添加字段<br>
+例如</p>
+<pre><code>{
+&quot;hello&quot; : &quot;hello&quot;,
+&quot;hello1&quot; : &quot;hello1&quot;,
+&quot;dialogTip&quot;:&quot;Hello $name&quot;
+}
+{
+&quot;hello&quot; : &quot;你好&quot;,
+&quot;hello1&quot; : &quot;你好1&quot;,
+&quot;dialogTip&quot;:&quot;你好 $name&quot;
+}
+</code></pre>
+<p>执行运行后，程序会自动在messages_xx.dart中添加获取代码</p>
+<pre><code>&quot;dialogTip&quot; : MessageLookupByLibrary.simpleMessage(&quot;Hello \$name&quot;),
+&quot;hello&quot; : MessageLookupByLibrary.simpleMessage(&quot;hello&quot;),
+&quot;hello1&quot; : MessageLookupByLibrary.simpleMessage(&quot;hello1&quot;)
+
+&quot;dialogTip&quot; : MessageLookupByLibrary.simpleMessage(&quot;你好 \$name&quot;),
+&quot;hello&quot; : MessageLookupByLibrary.simpleMessage(&quot;你好&quot;),
+&quot;hello1&quot; : MessageLookupByLibrary.simpleMessage(&quot;你好1&quot;)
+</code></pre>
+<h1 id="6使用">6.使用</h1>
+<p>简单使用：S.of(context).hello<br>
+带参数使用：S.of(context).dialogTip(&quot;Rhyme&quot;);</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://neverovo.github.io/tag/tJJc1ZXtL/" class="tag">
+                    Flutter
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/lIDlMPAfY/" class="tag">
+                    技术学习
+                  </a>
+                
+                  <a href="https://neverovo.github.io/tag/3A9TY2RGQ/" class="tag">
+                    NeverOuO
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://neverovo.github.io/post/never-or-zhou-mo-xiao-ji-20210327and28/">
+                  <h3 class="post-title">
+                    Never | 周末小记- 2021/03/27&amp;28
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
